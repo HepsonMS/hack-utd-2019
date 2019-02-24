@@ -1,10 +1,4 @@
 <?php
-
-/**
- * @author 
- * @copyright 2019
- */
-
 function generateRandomString($length = 4) {
     //$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $characters = '0123456789';

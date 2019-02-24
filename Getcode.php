@@ -1,6 +1,4 @@
-<?php
-include "base.php";
-?>
+
 <!DOCTYPE HTML>
 <!--
 	Spectral by HTML5 UP
@@ -44,42 +42,25 @@ include "base.php";
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Pick up food</h2>
-							
-							<html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
-    <style>
-      .map {
-        height: 400px;
-        width: 100%;
-      }
-    </style>
-    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
-    <title>OpenLayers example</title>
-  </head>
-  <body>
-    <h2>My Map</h2>
-    <div id="map" class="map"></div>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([37.41, 8.82]),
-          zoom: 4
-        })
-      });
-    </script>
-  </body>
+							<h2>Your Code</h2>
+                            <?php
+                            function generateRandomString($length = 4) {
+                                //$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                                $characters = '0123456789';
+                                $charactersLength = strlen($characters);
+                                $randomString = '';
+                                for ($i = 0; $i < $length; $i++) {
+                                    $randomString .= $characters[rand(0, $charactersLength - 1)];
+                                }
+                                return $randomString;
+                            }
+
+                            echo generateRandomString();
+
+                            ?>
+
+                            
 							<p>Use this code to open a box</p>
-                            <ul class="actions special">
-								<li><a href="Getcode.php" class="button primary">Get Code</a></li>
-							</ul>
 						</header>
                         <!--
 						<section class="wrapper style5">
