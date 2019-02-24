@@ -8,6 +8,7 @@ include "base.php";
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<link rel="shortcut icon" href="box.ico" type="image/x-icon">
 	<head>
 		<title>Foodbox</title>
 		<meta charset="utf-8" />
