@@ -1,6 +1,4 @@
-<?php
-include "base.php";
-?>
+
 <!DOCTYPE HTML>
 <!--
 	Spectral by HTML5 UP
@@ -44,42 +42,25 @@ include "base.php";
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Pick up food</h2>
-							
-							<html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
-    <style>
-      .map {
-        height: 400px;
-        width: 100%;
-      }
-    </style>
-    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
-    <title>OpenLayers example</title>
-  </head>
-  <body>
-    <h2>My Map</h2>
-    <div id="map" class="map"></div>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([37.41, 8.82]),
-          zoom: 4
-        })
-      });
-    </script>
-  </body>
-							<p>Use this code to open a box</p>
-                            <ul class="actions special">
-								<li><a href="Getcode.php" class="button primary">Get Code</a></li>
-							</ul>
+							<h2>Enter your code</h2>
+                            <form action="form1.php" method="post">
+
+                            <input type="text" name="number" value = "0" /><br />
+                            <br />
+                            <input type="submit" name="checkform" value="Submit" />
+                            </form> 
+                            <br />
+                            <?
+                            if  (isset($_POST['checkform'])) 
+                            {
+                            if  (( $_POST["number"] ) <=10 )  
+                                echo "The number you entered is less than or equal to  10";
+                                else
+                                echo "The number you entered is Greater than 10";
+
+                            }
+                            ?>
+                            
 						</header>
                         <!--
 						<section class="wrapper style5">
