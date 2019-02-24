@@ -48,6 +48,11 @@ include "base.php";
 								if(mysqli_num_rows($check_volunteer) == 1)
 								{
 									$_SESSION['Unlocked'] = "True";
+									date_default_timezone_set('america/chicago');
+									$registereddatetime = date("Y\-m\-d H\:i\:s");
+									$updatename = mysqli_query($dbcon, "UPDATE Delivery SET Pickup_DateTime='".$registereddatetime."' 
+																		WHERE Pin='".$pin."' AND Box_ID='".$box_id."' AND Pickup_DateTime='0000-00-00 00:00:00'");
+									
 									echo "<meta http-equiv='refresh' content='0;Box.php'/>";
 								}
 								else
